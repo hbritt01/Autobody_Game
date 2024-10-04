@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
@@ -42,48 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-=======
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!78 &1
-TagManager:
-  serializedVersion: 2
-  tags: []
-  layers:
-  - Default
-  - TransparentFX
-  - Ignore Raycast
-  - 
-  - Water
-  - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: 1
+    uniqueID: 2962569083
     locked: 0
->>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
+  - name: 2
+    uniqueID: 655252109
+    locked: 0
