@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 22
+<<<<<<< HEAD
   productGUID: d440f07673fe44912ac927c7bd2e12d4
+=======
+  productGUID: 8d2d1e5f5648c4e25aadbf4fc3ebbd84
+>>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +17,11 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
+<<<<<<< HEAD
   productName: Autobody Game
+=======
+  productName: Autobody_Game
+>>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -224,9 +232,15 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
+<<<<<<< HEAD
   clonedFromGUID: 10ad67313f4034357812315f3c407484
   templatePackageId: com.unity.template.2d@5.0.0
   templateDefaultScene: Assets/Scenes/SampleScene.unity
+=======
+  clonedFromGUID: 00000000000000000000000000000000
+  templatePackageId: 
+  templateDefaultScene: 
+>>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
   useCustomMainGradleTemplate: 0
@@ -259,6 +273,7 @@ PlayerSettings:
   m_BuildTargetIcons: []
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching: []
+<<<<<<< HEAD
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: MacStandaloneSupport
     m_GraphicsJobs: 0
@@ -294,6 +309,11 @@ PlayerSettings:
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
     m_Automatic: 1
+=======
+  m_BuildTargetGraphicsJobs: []
+  m_BuildTargetGraphicsJobMode: []
+  m_BuildTargetGraphicsAPIs: []
+>>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
   m_BuildTargetVRSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
@@ -492,7 +512,11 @@ PlayerSettings:
   ps4GarlicHeapSize: 2048
   ps4ProGarlicHeapSize: 2560
   playerPrefsMaxSize: 32768
+<<<<<<< HEAD
   ps4Passcode: bi9UOuSpM2Tlh01vOzwvSikHFswuzleh
+=======
+  ps4Passcode: jiktxwpAnw6JlC0WWFT0oWjM7cwRNynZ
+>>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -541,7 +565,11 @@ PlayerSettings:
   webGLTemplate: APPLICATION:Default
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
+<<<<<<< HEAD
   webGLCompressionFormat: 0
+=======
+  webGLCompressionFormat: 2
+>>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
@@ -566,14 +594,22 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
+<<<<<<< HEAD
   metroPackageName: 2D_BuiltInRenderer
+=======
+  metroPackageName: Autobody_Game
+>>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
+<<<<<<< HEAD
   metroApplicationDescription: 2D_BuiltInRenderer
+=======
+  metroApplicationDescription: Autobody_Game
+>>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -634,11 +670,19 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
+<<<<<<< HEAD
   cloudProjectId: a222edd5-7c8e-44f7-9c4a-270d5fcf8562
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Autobody Game
   organizationId: nics530
+=======
+  cloudProjectId: 
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: 
+  organizationId: 
+>>>>>>> c10b36c2a3590aaf30099b2fa06d761c5adbb3af
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0
