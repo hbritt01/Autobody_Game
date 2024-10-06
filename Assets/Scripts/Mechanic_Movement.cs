@@ -1,26 +1,32 @@
 using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
 
-public class Mechanic_Movement : MonoBehaviour {
+public class Mechanic_Movement : MonoBehaviour
+{
+    public float moveSpeed = 10f;
+    public float minX = -5f;
+    public float maxX = 5f;
+    public float minY = -6f;
+    public float maxY = 3f;
 
-    public float moveSpeed = 10f; // Speed of movement
+    void Update()
+    {
+        float moveX = Input.GetAxis("Horizontal");
+        float moveY = Input.GetAxis("Vertical");
 
-    void Update(){
-
-        float moveX = Input.GetAxis("Horizontal"); // A and D or Left/Right Arrow keys
-        float moveY = Input.GetAxis("Vertical");   // W and S or Up/Down Arrow keys
-
-        // Create movement vector
         Vector3 movement = new Vector3(moveX, moveY, 0);
 
-        // Move the player object
-        //TO-DO:
-        //Set boundaries for the mechanic
         transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
+
+        Vector3 currentPosition = transform.position;
+
+        currentPosition.x = Mathf.Clamp(currentPosition.x, minX, maxX);
+        currentPosition.y = Mathf.Clamp(currentPosition.y, minY, maxY);
+
+        transform.position = currentPosition;
     }
 
-    public void Move(string str){
+    public void Move(string str)
+    {
         Debug.Log(str);
     }
 }
