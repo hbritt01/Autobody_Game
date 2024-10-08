@@ -497,6 +497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 930524135}
   - component: {fileID: 930524134}
+  - component: {fileID: 930524136}
   m_Layer: 0
   m_Name: CAR (1)
   m_TagString: Untagged
@@ -571,6 +572,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
+--- !u!114 &930524136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930524133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60485f898960a4a6a92a5c5e9843d0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: 5, y: -1, z: 0}
+  startPosition: {x: 10, y: -6, z: 0}
+  moveSpeed: 4
 --- !u!1001 &1076086703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -771,6 +787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1681069190}
   - component: {fileID: 1681069189}
+  - component: {fileID: 1681069191}
   m_Layer: 0
   m_Name: CAR
   m_TagString: Untagged
@@ -845,6 +862,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -35}
+--- !u!114 &1681069191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681069188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2840884a010643d2b1d096a40889eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {x: -2, y: -3, z: 0}
+  startPosition: {x: 3, y: -8, z: 0}
+  moveSpeed: 4
 --- !u!1 &2034430957
 GameObject:
   m_ObjectHideFlags: 0
