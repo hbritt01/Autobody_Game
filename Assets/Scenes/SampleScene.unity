@@ -482,7 +482,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: -9.66, y: -0.66, z: 0}
-  moveSpeed: 2
+  startPosition: {x: 1, y: 5, z: 0}
+  moveSpeed: 3
+  sprites:
+  - {fileID: 21300000, guid: 371dca9e0d2a447adb3f32d926481534, type: 3}
+  - {fileID: 21300000, guid: b4500d9e0397540d3a9c2fa790a991c7, type: 3}
 --- !u!1 &930524133
 GameObject:
   m_ObjectHideFlags: 0
