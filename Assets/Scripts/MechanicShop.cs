@@ -9,7 +9,7 @@ public class MechanicShop : MonoBehaviour
     public Text warningText;
 
     public Dropdown partDropdown;
-    public CarIssue carIssue;  // Drag the CarIssue object here
+    public CarIssue carIssue;
 
     private int[] partPrices = { 0, 100, 200, 300 };
     private string[] partNames = { "Engine", "Tire", "Broken Passenger Mirror", "Broken Driver Mirror" };
@@ -33,17 +33,16 @@ public class MechanicShop : MonoBehaviour
             string selectedPart = partNames[dropdownIndex];
             int price = partPrices[dropdownIndex];
 
-            // Try to fix the issue first before subtracting coins
             bool issueFixed = carIssue.TryFixIssue(selectedPart);
 
             if (issueFixed)
             {
                 SubtractCoins(price);
-                ShowTemporaryMessage("Issue Fixed!", 2f);  // Show message for 2 seconds
+                ShowTemporaryMessage("Issue Fixed!", 2f);
             }
             else
             {
-                ShowTemporaryMessage("Part doesn't fix the issue! Coins not deducted.", 2f);  // Show message for 2 seconds
+                ShowTemporaryMessage("Part doesn't fix the issue! Coins not deducted.", 2f);
             }
         }
     }
@@ -58,7 +57,7 @@ public class MechanicShop : MonoBehaviour
         }
         else
         {
-            ShowTemporaryMessage("Not enough coins!", 2f);  // Show message for 2 seconds
+            ShowTemporaryMessage("Not enough coins!", 2f);
         }
     }
 
@@ -67,7 +66,6 @@ public class MechanicShop : MonoBehaviour
         coinText.text = "Coins: " + totalCoins.ToString();
     }
 
-    // Coroutine to show the message for a limited time
     private void ShowTemporaryMessage(string message, float duration)
     {
         StartCoroutine(HideMessageAfterDelay(message, duration));
@@ -75,13 +73,8 @@ public class MechanicShop : MonoBehaviour
 
     private IEnumerator HideMessageAfterDelay(string message, float duration)
     {
-        // Display the message
         warningText.text = message;
-
-        // Wait for the specified duration
         yield return new WaitForSeconds(duration);
-
-        // Clear the message
         warningText.text = "";
     }
 }
