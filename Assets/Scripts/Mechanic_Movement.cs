@@ -3,10 +3,10 @@ using UnityEngine;
 public class Mechanic_Movement : MonoBehaviour
 {
     public float moveSpeed = 10f;
-    public float minX = -5f;
-    public float maxX = 5f;
-    public float minY = -6f;
-    public float maxY = 3f;
+    // public float minX = -5f;
+    // public float maxX = 5f;
+    // public float minY = -6f;
+    // public float maxY = 3f;
 
     void Update()
     {
@@ -19,8 +19,8 @@ public class Mechanic_Movement : MonoBehaviour
 
         Vector3 currentPosition = transform.position;
 
-        currentPosition.x = Mathf.Clamp(currentPosition.x, minX, maxX);
-        currentPosition.y = Mathf.Clamp(currentPosition.y, minY, maxY);
+        // currentPosition.x = Mathf.Clamp(currentPosition.x, minX, maxX);
+        // currentPosition.y = Mathf.Clamp(currentPosition.y, minY, maxY);
 
         transform.position = currentPosition;
     }
