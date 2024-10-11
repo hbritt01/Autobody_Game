@@ -27,6 +27,10 @@ public class GameController : MonoBehaviour {
         SceneManager.LoadScene("Garage1");
     }
 
+    public void ColorButton() {
+        ColorButton()
+    }
+
     public void QuitGame() {
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
