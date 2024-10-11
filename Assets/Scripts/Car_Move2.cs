@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Car_Move2 : MonoBehaviour
 {
-    public Vector3 targetPosition = new Vector3(-2, -3, 0);
-    public Vector3 startPosition = new Vector3(3, -8, 0);
+    public Vector3 targetPosition = new Vector3(-3, -5, 0);
+    public Vector3 startPosition = new Vector3(3, -10, 0);
     public float moveSpeed = 4.0f;
     private bool shouldMove = true;
 
