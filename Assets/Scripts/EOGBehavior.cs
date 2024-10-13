@@ -16,7 +16,6 @@ public class EOGBehavior : MonoBehaviour
 
     public Sprite[] sprites; // Array to hold win and lose sprites
     public bool wins = true;
-    private bool isCoroutineRunning = false;
 
     private GameObject winObject;
     private GameObject loseObject;
