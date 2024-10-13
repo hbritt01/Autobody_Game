@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 816899452}
   - component: {fileID: 816899451}
+  - component: {fileID: 816899453}
   m_Layer: 0
   m_Name: Lose
   m_TagString: Untagged
@@ -200,13 +201,36 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816899450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5138, y: 0.0028, z: 0}
-  m_LocalScale: {x: 0.9568, y: 1.9273306, z: 1}
+  m_LocalPosition: {x: -4.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &816899453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816899450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbaa1121695244ba95a49c6862706ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPositionW: {x: 0, y: 0, z: 0}
+  startPositionW: {x: -4.5, y: 0, z: 0}
+  targetScaleW: {x: 2, y: 2, z: 0}
+  startScaleW: {x: 1, y: 2, z: 0}
+  targetPositionL: {x: 0, y: 0, z: 0}
+  startPositionL: {x: 4.5, y: 0, z: 0}
+  targetScaleL: {x: 2.4, y: 2.3, z: 0}
+  startScaleL: {x: 1.2, y: 2.3, z: 0}
+  sprites:
+  - {fileID: 21300000, guid: 407099a5dff864277ab45e0ab8478d3a, type: 3}
+  - {fileID: 21300000, guid: c8152756d7cd84eefb7fbd002b82ee3e, type: 3}
 --- !u!1 &1155901412
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,8 +401,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811848647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.4992, y: 0.0169, z: 0}
-  m_LocalScale: {x: 1.1564797, y: 2.2939954, z: 1.1}
+  m_LocalPosition: {x: 4.5, y: 0, z: 0}
+  m_LocalScale: {x: 1.2, y: 2.3, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -396,5 +420,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbaa1121695244ba95a49c6862706ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 10, y: 0, z: 0}
-  moveSpeed: 1
+  targetPositionW: {x: 0, y: 0, z: 0}
+  startPositionW: {x: -4.5, y: 0, z: 0}
+  targetScaleW: {x: 2, y: 2, z: 0}
+  startScaleW: {x: 1, y: 2, z: 0}
+  targetPositionL: {x: 0, y: 0, z: 0}
+  startPositionL: {x: 4.5, y: 0, z: 0}
+  targetScaleL: {x: 2.4, y: 2.3, z: 0}
+  startScaleL: {x: 1.2, y: 2.3, z: 0}
+  sprites:
+  - {fileID: 21300000, guid: 407099a5dff864277ab45e0ab8478d3a, type: 3}
+  - {fileID: 21300000, guid: c8152756d7cd84eefb7fbd002b82ee3e, type: 3}
