@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour {
 
 
     public void PlayAgain() {
-        SceneManager.LoadScene("Garage1");
+        SceneManager.LoadScene("shop");
     }
 
 

@@ -32,6 +32,7 @@ public class MechanicShop : MonoBehaviour
     }
     void BuyPart(int partIndex)
     {
+        Debug.Log("part is " + partNames[partIndex] + " and costs " + partPrices[partIndex]);
         if (partIndex < partPrices.Length)
         {
             string selectedPart = partNames[partIndex];
@@ -49,67 +50,67 @@ public class MechanicShop : MonoBehaviour
         }
     }
 
-public void engButton()
-{
-    BuyPart(0);
-}
-public void TireButton()
-{
-    BuyPart(1);
-}
-public void MirrButton()
-{
-    BuyPart(2);
-}
-public void PaintButton()
-{
-    BuyPart(3);
-}
-public void OilButton()
-{
-    BuyPart(4);
-}
-bool CanAfford(int price) 
-{
-    if (price <= totalCoins) {
-        return true;
-    }
-    return false;
-}
-public void SubtractCoins(int price)
-{
-    
-    if (totalCoins >= price)
+    public void engButton()
     {
-        Debug.Log("in thing");
-        totalCoins -= price;
-        UpdateCoinText();
+        BuyPart(0);
+    }
+    public void TireButton()
+    {
+        BuyPart(1);
+    }
+    public void MirrButton()
+    {
+        BuyPart(2);
+    }
+    public void PaintButton()
+    {
+        BuyPart(3);
+    }
+    public void OilButton()
+    {
+        BuyPart(4);
+    }
+    bool CanAfford(int price) 
+    {
+        if (price <= totalCoins) {
+            return true;
+        }
+        return false;
+    }
+    public void SubtractCoins(int price)
+    {
+        
+        if (totalCoins >= price)
+        {
+            Debug.Log("in thing");
+            totalCoins -= price;
+            UpdateCoinText();
+            warningText.text = "";
+        }
+        Debug.Log("price is: " + price);
+        Debug.Log("total coins: " + totalCoins);
+    }
+
+    void UpdateCoinText()
+    {
+        coinText.text = "Coins: " + totalCoins.ToString();
+    }
+
+    private void ShowTemporaryMessage(string message, float duration)
+    {
+        StartCoroutine(HideMessageAfterDelay(message, duration));
+    }
+
+    private IEnumerator HideMessageAfterDelay(string message, float duration)
+    {
+        warningText.text = message;
+        yield return new WaitForSeconds(duration);
         warningText.text = "";
     }
-    Debug.Log("price is: " + price);
-    Debug.Log("total coins: " + totalCoins);
-}
 
-void UpdateCoinText()
-{
-    coinText.text = "Coins: " + totalCoins.ToString();
-}
-
-private void ShowTemporaryMessage(string message, float duration)
-{
-    StartCoroutine(HideMessageAfterDelay(message, duration));
-}
-
-private IEnumerator HideMessageAfterDelay(string message, float duration)
-{
-    warningText.text = message;
-    yield return new WaitForSeconds(duration);
-    warningText.text = "";
-}
-
-void AddToInventory(string carPart) 
-{
-    return;
+    void AddToInventory(string carPart) 
+    {
+        return;
 }
 }
 
