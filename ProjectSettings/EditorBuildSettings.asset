@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Garage1.unity
     guid: e80f2558421c34ca0a9aaa284a1ad509
   - enabled: 1
+    path: Assets/Scenes/Pipe_Minigame.unity
+    guid: 9a154861b91bb4008b9f9030e11295c9
+  - enabled: 1
+    path: Assets/Scenes/Tire_Minigame.unity
+    guid: 34b48f05894944270b05bfc63995fe19
+  - enabled: 1
+    path: Assets/Scenes/Paint_Minigame.unity
+    guid: 465b82287ae3c452b852df746993af4f
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
