@@ -2863,7 +2863,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thatCarsProblems: []
-  cardropdown: {fileID: 0}
 --- !u!1 &1717856601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3031,7 +3030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 772234770549104222, guid: b7736fae000c54919b96000bef2db475, type: 3}
       propertyPath: startPosition.y
-      value: -6
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 772234770549104222, guid: b7736fae000c54919b96000bef2db475, type: 3}
       propertyPath: targetPosition.x
@@ -3089,7 +3088,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CAR (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 772234770549104222, guid: b7736fae000c54919b96000bef2db475, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3115,7 +3115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 5, y: -1, z: 0}
-  startPosition: {x: 10, y: -6, z: 0}
+  startPosition: {x: 10, y: -3, z: 0}
   moveSpeed: 4
 --- !u!1 &2017352862
 GameObject:
