@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 using System.Collections.Generic; 
+using UnityEngine.SceneManagement; 
 
 public class MechanicShop : MonoBehaviour
 {
-    public int totalCoins = 1000;
+    public int totalCoins = 600; 
     public Text coinText;
     public Text warningText;
     public Text engButtonText;
@@ -17,16 +19,30 @@ public class MechanicShop : MonoBehaviour
     private int[] partPrices = { 400, 100, 150, 50, 85 };
     private string[] partNames = { "Engine", "Tire", "Mirrors", "Paint", "Oil" };
 
-   
     public static List<string> inventory = new List<string>();
+
+    public int totalCoinsSpent = 0; 
 
     void Start()
     {
+        if (PlayerPrefs.GetInt("IsNewGame", 1) == 1)
+        {
+            totalCoins = 1000;
+            PlayerPrefs.SetInt("TotalCoins", totalCoins); 
+            PlayerPrefs.SetInt("IsNewGame", 0); 
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            totalCoins = PlayerPrefs.GetInt("TotalCoins", 1000);
+            totalCoinsSpent = PlayerPrefs.GetInt("TotalCoinsSpent", 0); 
+        }
+
         PopulatePartButtons();
         UpdateCoinText();
         warningText.text = "";
     }
-    
+
     void PopulatePartButtons() 
     {
         engButtonText.text = partNames[0] + ": " + partPrices[0];
@@ -59,7 +75,7 @@ public class MechanicShop : MonoBehaviour
 
     public void engButton()
     {
-        
+        Debug.Log("Engine button clicked.");
         BuyPart(0);
     }
 
@@ -90,14 +106,26 @@ public class MechanicShop : MonoBehaviour
 
     public void SubtractCoins(int price)
     {
+        Debug.Log("Attempting to subtract coins... Current coins: " + totalCoins + " Price: " + price);
+
         if (totalCoins >= price)
         {
             totalCoins -= price;
+            totalCoinsSpent += price; 
+
+            PlayerPrefs.SetInt("TotalCoins", totalCoins); 
+            PlayerPrefs.SetInt("TotalCoinsSpent", totalCoinsSpent); 
+            PlayerPrefs.Save(); 
             UpdateCoinText();
             warningText.text = "";
+
+            Debug.Log("Coins saved in shop: " + totalCoins);
+            Debug.Log("Total coins spent: " + totalCoinsSpent);
         }
-        Debug.Log("Price is: " + price);
-        Debug.Log("Total coins: " + totalCoins);
+        else
+        {
+            Debug.Log("Not enough coins to make the purchase.");
+        }
     }
 
     void UpdateCoinText()
@@ -105,7 +133,7 @@ public class MechanicShop : MonoBehaviour
         coinText.text = "Coins: " + totalCoins.ToString();
     }
 
-    private void ShowTemporaryMessage(string message, float duration)
+    public void ShowTemporaryMessage(string message, float duration)
     {
         StartCoroutine(HideMessageAfterDelay(message, duration));
     }
@@ -127,5 +155,32 @@ public class MechanicShop : MonoBehaviour
     void DisplayInventory()
     {
         Debug.Log("Current Inventory: " + string.Join(", ", inventory));
+    }
+
+    public void GoToGarage()
+    {
+        if (totalCoinsSpent >= 400)
+        {
+            Debug.Log("Going to garage...");
+            SceneManager.LoadScene("GarageScene"); 
+        }
+        else
+        {
+            ShowTemporaryMessage("You must spend at least 400 coins before going to the garage!", 2f);
+        }
+    }
+
+    void OnDisable()
+    {
+        PlayerPrefs.SetInt("TotalCoins", totalCoins);
+        PlayerPrefs.SetInt("TotalCoinsSpent", totalCoinsSpent); 
+        PlayerPrefs.Save();
+        Debug.Log("Coins saved on scene exit: " + totalCoins);
+    }
+
+    void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("IsNewGame", 1);
+        PlayerPrefs.Save();
     }
 }

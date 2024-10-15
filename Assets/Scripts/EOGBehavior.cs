@@ -14,27 +14,23 @@ public class EOGBehavior : MonoBehaviour
     public Vector3 targetScaleL = new Vector3(2.6f, 2.5f, 0);
     public Vector3 startScaleL = new Vector3(1.2f, 2.3f, 0);
 
-    public Sprite[] sprites; // Array to hold win and lose sprites
+    public Sprite[] sprites; 
     public bool wins = true;
 
     private GameObject winObject;
     private GameObject loseObject;
 
-    // Start is called before the first frame update
     void Start()
     {
-        // Create separate GameObjects for win and lose sprites
         winObject = new GameObject("Win");
         loseObject = new GameObject("Lose");
 
-        // Add SpriteRenderer components and set initial sprites
         SpriteRenderer winRenderer = winObject.AddComponent<SpriteRenderer>();
         SpriteRenderer loseRenderer = loseObject.AddComponent<SpriteRenderer>();
 
-        winRenderer.sprite = sprites[0]; // Win sprite
-        loseRenderer.sprite = sprites[1]; // Lose sprite
+        winRenderer.sprite = sprites[0]; 
+        loseRenderer.sprite = sprites[1];
 
-        // Set initial positions and scales
         winObject.transform.position = startPositionW;
         winObject.transform.localScale = startScaleW;
 
@@ -42,10 +38,8 @@ public class EOGBehavior : MonoBehaviour
         loseObject.transform.localScale = startScaleL;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Move and scale only the active GameObject
         winObject.SetActive(true);
         loseObject.SetActive(true);
 
