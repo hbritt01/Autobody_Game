@@ -42,7 +42,7 @@ public class CarIssue1 : MonoBehaviour
 
     void setDropdown()
     {
-        // Dropdown cardropdown = GetComponent<Dropdown>();
+      
         foreach (string s in thatCarsProblems) {
             cardropdown.ClearOptions();
             cardropdown.AddOptions(thatCarsProblems);

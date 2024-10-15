@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using System;
+using System.Collections.Generic; 
+
 public class MechanicShop : MonoBehaviour
 {
     public int totalCoins = 1000;
@@ -13,8 +14,12 @@ public class MechanicShop : MonoBehaviour
     public Text PaintButtonText;
     public Text OilButtonText;
 
-    private int[] partPrices = { 600, 100, 150, 50, 85 };
+    private int[] partPrices = { 400, 100, 150, 50, 85 };
     private string[] partNames = { "Engine", "Tire", "Mirrors", "Paint", "Oil" };
+
+   
+    public static List<string> inventory = new List<string>();
+
     void Start()
     {
         PopulatePartButtons();
@@ -30,9 +35,9 @@ public class MechanicShop : MonoBehaviour
         PaintButtonText.text = partNames[3] + ": " + partPrices[3];
         OilButtonText.text = partNames[4] + ": " + partPrices[4];
     }
+    
     void BuyPart(int partIndex)
     {
-        Debug.Log("part is " + partNames[partIndex] + " and costs " + partPrices[partIndex]);
         if (partIndex < partPrices.Length)
         {
             string selectedPart = partNames[partIndex];
@@ -40,11 +45,13 @@ public class MechanicShop : MonoBehaviour
 
             if (CanAfford(price))
             {
-                Debug.Log("buying part!");
+                Debug.Log("Buying part: " + selectedPart);
                 SubtractCoins(price);
-                AddToInventory(selectedPart); //havent implemented yet
-            } else {
-                Debug.Log("failed to buy part.");
+                AddToInventory(selectedPart); 
+            }
+            else
+            {
+                Debug.Log("Failed to buy part.");
                 ShowTemporaryMessage("Not enough coins!", 2f);
             }
         }
@@ -52,43 +59,45 @@ public class MechanicShop : MonoBehaviour
 
     public void engButton()
     {
+        
         BuyPart(0);
     }
+
     public void TireButton()
     {
         BuyPart(1);
     }
+
     public void MirrButton()
     {
         BuyPart(2);
     }
+
     public void PaintButton()
     {
         BuyPart(3);
     }
+
     public void OilButton()
     {
         BuyPart(4);
     }
-    bool CanAfford(int price) 
+
+    bool CanAfford(int price)
     {
-        if (price <= totalCoins) {
-            return true;
-        }
-        return false;
+        return price <= totalCoins;
     }
+
     public void SubtractCoins(int price)
     {
-        
         if (totalCoins >= price)
         {
-            Debug.Log("in thing");
             totalCoins -= price;
             UpdateCoinText();
             warningText.text = "";
         }
-        Debug.Log("price is: " + price);
-        Debug.Log("total coins: " + totalCoins);
+        Debug.Log("Price is: " + price);
+        Debug.Log("Total coins: " + totalCoins);
     }
 
     void UpdateCoinText()
@@ -108,9 +117,15 @@ public class MechanicShop : MonoBehaviour
         warningText.text = "";
     }
 
-    void AddToInventory(string carPart) 
+    void AddToInventory(string carPart)
     {
-        return;
-}
-}
+        inventory.Add(carPart);
+        Debug.Log("Added " + carPart + " to inventory.");
+        DisplayInventory(); 
+    }
 
+    void DisplayInventory()
+    {
+        Debug.Log("Current Inventory: " + string.Join(", ", inventory));
+    }
+}
