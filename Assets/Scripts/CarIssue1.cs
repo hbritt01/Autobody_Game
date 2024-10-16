@@ -8,7 +8,7 @@ public class CarIssue1 : MonoBehaviour
 
     private int numProblems;
     [SerializeField] private List<string> thatCarsProblems;
-    [SerializeField] private Dropdown cardropdown;
+    // [SerializeField] private Dropdown cardropdown;
 
     void Start()
     {
@@ -39,10 +39,10 @@ public class CarIssue1 : MonoBehaviour
     void setDropdown()
     {
       
-        foreach (string s in thatCarsProblems) {
-            cardropdown.ClearOptions();
-            cardropdown.AddOptions(thatCarsProblems);
-        }
+        // foreach (string s in thatCarsProblems) {
+        //     cardropdown.ClearOptions();
+        //     cardropdown.AddOptions(thatCarsProblems);
+        // }
 
     }
     void ShowMenu()

@@ -73,6 +73,20 @@ public class CarProblemGenerator : MonoBehaviour
         if (canFixProblem1)
         {
             MechanicShop.inventory.Remove(partForProblem1);
+            Debug.Log("problem is " + partForProblem1);
+           if (partForProblem1 == "Tire") {
+                Debug.Log("Tire??");
+                SceneManager.LoadScene("Tire_Minigame");
+            }
+            if (partForProblem1 == "Engine") {
+                Debug.Log("ENGINE??");
+                SceneManager.LoadScene("Pipe_Minigame");
+
+            }
+            if (partForProblem1 == "Paint") {
+                Debug.Log("PAINT??");
+                SceneManager.LoadScene("Paint_Minigame");
+            }
             problemText1.text = "Problem 1: Fixed!";
             Debug.Log("Fixed problem 1: " + currentProblem1);
             problemsFixed++;
@@ -81,6 +95,20 @@ public class CarProblemGenerator : MonoBehaviour
         if (canFixProblem2)
         {
             MechanicShop.inventory.Remove(partForProblem2);
+             Debug.Log("problem is " + partForProblem2);
+            if (partForProblem1 == "Tire") {
+                Debug.Log("Tire??");
+                SceneManager.LoadScene("Tire_Minigame");
+            }
+            if (partForProblem1 == "Engine") {
+                Debug.Log("ENGINE??");
+                SceneManager.LoadScene("Pipe_Minigame");
+
+            }
+            if (partForProblem1 == "Paint Scratch") {
+                Debug.Log("PAINT??");
+                SceneManager.LoadScene("Paint_Minigame");
+            }
             problemText2.text = "Problem 2: Fixed!";
             Debug.Log("Fixed problem 2: " + currentProblem2);
             problemsFixed++;
@@ -94,11 +122,11 @@ public class CarProblemGenerator : MonoBehaviour
             PlayerPrefs.Save();
             Debug.Log("Both problems fixed! Awarded 2000 extra coins. New total: " + totalCoins);
 
-            if (totalCoins >= 10000)
-            {
-                Debug.Log("Player has won the game! Switching to 'You Win' scene.");
-                SceneManager.LoadScene("EndOfGame"); 
-            }
+            // if (totalCoins >= 10000)
+            // {
+            //     Debug.Log("Player has won the game! Switching to 'You Win' scene.");
+            //     SceneManager.LoadScene("EndOfGame"); 
+            // }
         }
         else if (problemsFixed == 1)
         {
